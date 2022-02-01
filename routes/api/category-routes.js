@@ -81,7 +81,7 @@ router.put('/:id', (req, res) => {
     }
   )
   .then(data => {
-    if(!data){
+    if(!data[0]){
       res.status(404).json({message: 'No category was found with this id'});
       return;
     }
